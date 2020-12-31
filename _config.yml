@@ -58,6 +58,24 @@ default_category: uncategorized
 category_map:
 tag_map:
 
+# MathJax Support
+math:
+  engine: 'mathjax' # or 'katex'
+  mathjax:
+    src: https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+    config: {
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+        processEscapes: true
+      },
+      TeX: {
+        equationNumbers: {
+          autoNumber: "AMS"
+        }
+      }
+    }
+
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
